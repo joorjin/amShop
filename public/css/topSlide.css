@@ -1,0 +1,44 @@
+.product{
+  direction: rtl;
+  font-size: 80%;
+  text-align: right;
+}
+.text-muted{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.margin-10 {
+  margin-right: -15%;
+  margin-left: -15%;
+}
+
+@media screen and (min-width:300px) {
+  .margin-10 {
+    margin-right: -15%;
+    margin-left: -15%;
+  }
+}
+@media screen and (max-width:400px) {
+  .margin-10 {
+    margin-right: -25%;
+    margin-left: -25%;
+  }
+}
+@media screen and (min-width:768px) {
+  .margin-10 {
+    margin-right: -45%;
+    margin-left: -45%;
+  }
+}
+@media screen and (min-width:992px) {
+  .margin-10 {
+    margin-right: -25%;
+    margin-left: -25%;
+  }
+}
+
+.test{
+    width:200px;
+
+}
