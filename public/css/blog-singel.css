@@ -1,0 +1,44 @@
+.bg-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    height: 400px;
+    /* border-radius: 0 0 100% 100%; */
+}
+
+.bg-img .titr{
+    top: 400px;
+    width: 60%;
+    left: 40%;
+    height: 84px;
+    font-size: 30px;
+}
+.bg-img .titr h3{
+    margin-top: 10px;
+}
+.bg-img .titr .triangle{
+    border-top: 60px solid transparent;
+    border-left: 60px solid #007bff;
+    border-bottom: 60px solid transparent;
+    right: 50px;
+    top: -52px;
+}
+
+.text{
+    margin: 0 auto;
+    margin-top: 100px;
+    direction: rtl;
+    line-height: 40px;
+}
+
+.text img{
+    margin: 0 auto;
+    height: 28em;
+    /* aspect-ratio:1/1; */
+}
+
+@media screen and (min-width:1000px) {
+    .text img{
+        height: 33em;
+    }
+}
