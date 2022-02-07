@@ -1,0 +1,19 @@
+.testimony-wrap{
+    background: #ffffff;
+    height: 250px;
+}
+
+.bodySl2 img{
+    width: 250px !important;
+    height: 250px;
+    position: relative;
+    left:  calc(100% - 100px);
+}
+.text-sl2{
+    top: -250px;
+    width: 200px;
+    left: calc(100% - 200px);
+}
+.bodySl2 h3{
+    font-size: 15px;
+}
