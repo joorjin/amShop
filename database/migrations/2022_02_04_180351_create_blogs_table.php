@@ -16,13 +16,14 @@ class CreateBlogsTable extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->integer('writer_id');
-            $table->integer('confirmation_manager_id');
-            $table->integer('status')->default(0);
+            $table->enum('status', ['display','timed','waiting_confirmation','failed','request','edit','delete']);
+            $table->string('title');
+            $table->string('description');
+            $table->string('text');
             $table->string('small_image');
             $table->string('main_image');
-            $table->string('title');
-            $table->text('text');
-            $table->boolean('del')->default(0);
+            $table->timestamp('starterd_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

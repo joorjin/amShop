@@ -56,19 +56,10 @@ class dbadd extends Command
 
 
         $this->comment("Preliminary review ...");
-        Artisan::call('migrate');
-        usleep(70000);
-        $this->comment("Ongoing rollback");
+        $this->comment("rollback");
         Artisan::call('migrate:rollback');
-        usleep(70000);
+        $this->comment("migrate");
         Artisan::call('migrate');
-
-
-
-
-
-
-        usleep(10000);
         $this->info("done successfully!✔️");
 
     }
