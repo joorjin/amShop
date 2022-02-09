@@ -62,5 +62,9 @@ class dbadd extends Command
         Artisan::call('migrate');
         $this->info("done successfully!✔️");
 
+
+        $this->info("🏅 v=1.1.14");
+
+
     }
 }
