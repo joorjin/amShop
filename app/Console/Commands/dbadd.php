@@ -63,7 +63,7 @@ class dbadd extends Command
         $this->info("done successfully!✔️");
 
 
-        $this->info("🏅 v=1.1.14");
+        $this->info("v=1.1.14 ★");
 
 
     }
