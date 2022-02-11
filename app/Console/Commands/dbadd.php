@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Models\UserValidation;
 use App\Models\Writer;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
@@ -69,6 +71,7 @@ class dbadd extends Command
         $this->question("run query test");
 
 //user table
+        $this->comment("add data in  Writer tabele➕");
         $writer = new Writer;
         $writer->status = 'active';
         $writer->first_name = 'علی';
@@ -85,6 +88,27 @@ class dbadd extends Command
         $writer->latest_activists_at = now();
         $writer->deleted_at = Null;
         $writer->save();
+
+
+        $this->comment("add data in  user_validations tabele➕");
+        $seed = str_split(
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            .'abcdefghijklmnopqrstuvwxyz'
+            .'*/-!@#$%^&*+=-_|\)('
+            .'0123456789');
+            shuffle($seed);
+            $rand = '';
+            foreach (array_rand($seed, 80) as $k) $rand .= $seed[$k];
+
+        $UserValidation = new UserValidation;
+        $UserValidation->user_id = 1;
+        $UserValidation->tabele_name="Writer";
+        $UserValidation->token="$rand";
+        $UserValidation->ended_at=Carbon::now()->addDays(30);
+        $UserValidation->save();
+
+
+
 
 
 
