@@ -106,6 +106,7 @@ class dbadd extends Command
         $UserValidation->token="$rand";
         $UserValidation->ended_at=Carbon::now()->addDays(30);
         $UserValidation->save();
+        
 
 
 
