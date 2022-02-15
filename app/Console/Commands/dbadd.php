@@ -90,6 +90,25 @@ class dbadd extends Command
         $writer->save();
 
 
+        $this->comment("add data in  Writer tabele➕");
+        $writer = new Writer;
+        $writer->status = 'active';
+        $writer->first_name = 'محمد';
+        $writer->last_name = 'عظیمی';
+        $writer->email = 'azimi@gmail.com';
+        $writer->email_confirm = NULL;
+        $writer->password = md5(12345678);
+        $writer->phone = Null;
+        $writer->telegram_id = 'test';
+        $writer->telegram_number_id = 125489365;
+        $writer->telegram_confirm = Null;
+        $writer->confirmation_manager_id = 5;
+        $writer->starterd_at = now();
+        $writer->latest_activists_at = now();
+        $writer->deleted_at = Null;
+        $writer->save();
+
+
         $this->comment("add data in  user_validations tabele➕");
         $seed = str_split(
             'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -106,7 +125,7 @@ class dbadd extends Command
         $UserValidation->token="$rand";
         $UserValidation->ended_at=Carbon::now()->addDays(30);
         $UserValidation->save();
-        
+
 
 
 
