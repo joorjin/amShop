@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
-
+use app\http\controllers\testcontroller;
+use app\http\controllers\writercontroller;
 
 
 Route::get('/', function () {
@@ -11,4 +12,5 @@ Route::get('/', function () {
 });
 
 
-Route::any('test',[TestController::class,'test']);
+Route::any('writerslogin',[writercontroller::class,'writerslogin']);
+
